@@ -175,7 +175,7 @@ string_txt (Chr c)   s  = c:s
 string_txt (Str s1)  s2 = s1 ++ s2
 string_txt (PStr s1) s2 = unpackFS s1 ++ s2
 string_txt (ZStr s1) s2 = zString s1 ++ s2
-string_txt (LStr s1 _) s2 = unpackLitString s1 ++ s2
+string_txt (LStr s1) s2 = unpackLitString s1 ++ s2
 
 
 exportListItem :: ExportItem DocName -> LaTeX
